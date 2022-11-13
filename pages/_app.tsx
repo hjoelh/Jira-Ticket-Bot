@@ -9,7 +9,7 @@ import { trpc } from "../src/trpc";
 
 const title = "Jira Ticket Bot - for GitHub";
 const description =
-  "A simple & free tool to ensure Jira Ticket Links are commented on Pull Requests";
+  "Free tool that comments Jira Ticket Links on Pull Requests";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const user = useGlobalStore((s) => s.user);
