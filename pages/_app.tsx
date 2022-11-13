@@ -32,6 +32,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content="/og-img.png" />
+
+        <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
       <QueryClientProvider client={queryClient}>
         <ChakraProvider>
