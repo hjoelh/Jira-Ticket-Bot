@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useGlobalStore } from "../src/useGlobalStore";
 import Home from ".";
 import { trpc } from "../src/trpc";
+import Script from "next/script";
 
 const title = "Jira Ticket Bot - for GitHub";
 const description =
@@ -33,8 +34,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content="/og-img.png" />
 
-        <script async src="https://cdn.splitbee.io/sb.js"></script>
+        <script type="text/javascript">{`window.$crisp=[];window.CRISP_WEBSITE_ID="c1cf70bf-6fd6-45f7-b0f2-5263dd2fc50a";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`}</script>
       </Head>
+      <Script defer src="https://cdn.splitbee.io/sb.js"></Script>
+
       <QueryClientProvider client={queryClient}>
         <ChakraProvider>
           <div style={{ padding: "25px", height: "100vh" }}>
