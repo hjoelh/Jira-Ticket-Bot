@@ -7,6 +7,7 @@ import { useGlobalStore } from "../src/useGlobalStore";
 import Home from ".";
 import { trpc } from "../src/trpc";
 import Script from "next/script";
+import { Github } from "../src/components/shared/Github";
 
 const title = "Jira Ticket Bot - for GitHub";
 const description =
@@ -53,6 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </div>
         </ChakraProvider>
       </QueryClientProvider>
+      <Github />
     </>
   );
 }
