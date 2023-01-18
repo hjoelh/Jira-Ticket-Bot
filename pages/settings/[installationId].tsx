@@ -1,5 +1,8 @@
 import { CheckIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
   Badge,
   Button,
   FormControl,
@@ -124,6 +127,17 @@ export default function Page() {
                 watchForm().domain ? watchForm().domain : "<DOMAIN>"
               }.atlassian.net/jira...`}
             </FormHelperText>
+
+            {(watchForm().domain.includes("@") ||
+              watchForm().domain.includes(".")) && (
+              <Alert status="error" style={{ marginTop: 25 }}>
+                <AlertIcon />
+                <AlertDescription>
+                  {`Please double check your Jira/Atlassian domain. It is unlikely to include
+                    '@' or '.'`}
+                </AlertDescription>
+              </Alert>
+            )}
           </FormControl>
 
           <Button
