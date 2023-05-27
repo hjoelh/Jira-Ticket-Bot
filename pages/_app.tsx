@@ -8,7 +8,6 @@ import Home from ".";
 import { trpc } from "../src/trpc";
 import Script from "next/script";
 import { Github } from "../src/components/shared/Github";
-import { FeedbackFish } from "../src/components/shared/FeedbackFish";
 
 const title = "Jira Ticket Bot - for GitHub";
 const description =
@@ -54,7 +53,24 @@ function MyApp({ Component, pageProps }: AppProps) {
         </ChakraProvider>
       </QueryClientProvider>
       <Github />
-      <FeedbackFish />
+      <div
+        style={{
+          position: "fixed",
+          bottom: 30,
+          left: 75,
+          fontWeight: "bold",
+          background: "white",
+        }}
+      >
+        <a
+          href="https://github.com/hjoelh/Jira-Ticket-Bot/issues"
+          target="_blank"
+          style={{ fontWeight: "bold" }}
+          rel="noreferrer"
+        >
+          Idea, feedback, issue?
+        </a>
+      </div>
     </>
   );
 }

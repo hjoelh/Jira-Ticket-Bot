@@ -39,7 +39,7 @@ const bot = (app: Probot) => {
 
 const log = console.log;
 
-const JIRA_ISSUE_REGEX = /[A-Z]{2,}-\d+/g;
+const JIRA_ISSUE_REGEX = /[A-Za-z]{2,}-\d+/g;
 
 const generateJiraLink = (issueId: string, domain: string) =>
   `https://${domain}.atlassian.net/browse/${issueId}`;
