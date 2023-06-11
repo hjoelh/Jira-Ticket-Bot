@@ -63,7 +63,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
       >
         <a
-          href="https://github.com/hjoelh/Jira-Ticket-Bot/issues"
+          href="https://github.com/hjoelh/Jira-Ticket-Bot/issues/new"
           target="_blank"
           style={{ fontWeight: "bold" }}
           rel="noreferrer"
