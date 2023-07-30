@@ -4,6 +4,7 @@ import IMAGE from "../../../public/img1.png";
 import IMAGE2 from "../../../public/img2.png";
 import { CustomImage } from "./CustomImage";
 import { GithubSVG, SignInBtn } from "./SignInBtn";
+import Image from "next/image";
 
 export const MainContent = () => {
   return (
@@ -32,6 +33,28 @@ export const MainContent = () => {
         <Divider> / </Divider>
         <SignInBtn />
       </BoxForLinks>
+
+      <aside style={{ margin: "25px 0", textAlign: "center" }}>
+        <h2 style={{ fontWeight: 600, paddingBottom: 20, fontSize: 18 }}>
+          ✨🆕✨ You may also be interested in{" "}
+          <a
+            style={{ textDecoration: "underline" }}
+            href="https://www.prepack.app"
+          >
+            PrePack
+          </a>{" "}
+          ⤵✨🆕✨
+        </h2>
+        <a href="https://www.prepack.app">
+          <Image
+            alt="Prepack"
+            src="/prepack.png"
+            width={650}
+            height={275}
+            style={{ borderRadius: "10px" }}
+          />
+        </a>
+      </aside>
     </Container>
   );
 };
